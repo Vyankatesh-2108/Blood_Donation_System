@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>show data</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/show.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--<script>
+         const update = () => {
+            alert("record updated"+);
+        };
+        
+</script> -->
+</head>
+
+<body style="background-color: #F9F2F1">   
+    {{>navbar}}
+<section style="margin-top:7%;">
+    <div class="card col-md-8 offset-md-2 table-wrapper-scroll-y my-custom-scrollbar">
+      <h2 style="margin-top:10px; padding-top:8px; padding-bottom:8px; text-align:center; color:RED; word-spacing:5px; font-weight:bold;">DONOR'S <span style="color:#444444">LIST</span></h2>
+        <div class="card-body">
+            <table class="table table-bordered table-striped mb-0 " >
+              <thead style="background-color: #F9F2F1; color:#444444;">
+                <tr style="font-size:17px;">
+                    <th scope="col">First name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Blood</th>
+                    
+                </tr>
+              </thead>
+            <tbody id="mytable">
+              {{#each database}}
+                <tr>
+                    <td>{{this.firstname}}</td>
+                    <td>{{this.lastname}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.gender}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.bgroup}}</td>
+                    
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+      </div>
+</section>
+           
+</body>
+</html>

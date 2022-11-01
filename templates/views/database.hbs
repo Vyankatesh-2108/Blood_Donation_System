@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>show data</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/navbar.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--<script>
+         const update = () => {
+            alert("record updated"+);
+        };
+        
+</script> -->
+</head>
+
+<body>   
+    {{>navbar}}
+<section style="margin-top:5%; background-color: #F9F2F1;">
+    <h2 style="margin-top:10px; padding-top:18px; padding-bottom:8px; text-align:center; font-weight:bold; color:#444444; word-spacing:8px;">A D M I N <span style="color:rgb(220, 60, 60);">P A N E L</span></h2>
+    <div class="card col-md-12 offset-md-0 table-wrapper-scroll-y my-custom-scrollbar">
+        <div class="card-body">
+            <table class="table table-bordered table-striped mb-0 " >
+                        <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Blood</th>
+                </tr>
+              </thead>
+            <tbody id="mytable">
+              {{#each database}}
+                <tr>
+                    <td>{{this.firstname}}</td>
+                    <td>{{this.lastname}}</td>
+                    <td>{{this.email}}@gmail.com</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.gender}}</td>
+                    <td>{{this.age}}</td>
+                    <td>{{this.bgroup}}</td>
+                    <td> <a href="/{{this.email}}"><button type="button" class="btn btn-primary">Update</button></a>
+                    <a href="/{{this._id}}/0"><button type="button" class="btn btn-danger" onclick="return confirm('want to delete the record')" >Delete</button></a></td>
+                </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+      </div>
+</section>
+           
+</body>
+</html>

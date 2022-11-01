@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	
+	<link rel="stylesheet" href="css/style.css">
+	<title>Responsive Login And Register Form</title>
+</head>
+<body>
+
+	<div class="container">
+		<form action="/login" method="POST" class="login active">
+			<h2 class="title">Login with your account</h2>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Email address" name="email">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Your password" name="password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">At least 8 characters</span>
+			</div>
+			<button type="submit" class="btn-submit">Login</button>
+			
+			<p>I don't have an account. <a href="#" onclick="switchForm('register', event)">Register</a></p>
+		</form>
+
+		<form action="/register" method="POST" class="register">
+			<h2 class="title">Blood Donar Registration Form</h2>
+
+      <div class="form-group">
+				
+				<div class="input-group">
+					<input type="text" name="firstname" id="email" placeholder="First Name">
+					<i class='bx bx-user'></i>
+				</div>
+			</div>
+
+      <div class="form-group">
+				
+				<div class="input-group">
+					<input type="text" name="lastname" id="email" placeholder="Last Name">
+					<i class='bx bx-user'></i>
+				</div>
+			</div>
+
+			<div class="form-group">
+				
+				<div class="input-group">
+					<input type="email" name="email" id="email" placeholder="Email address">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+
+      <div class="form-group">
+				
+				<div class="input-group">
+					<input type="text" name="phone" id="email" placeholder="phone number">
+					<i class='bx bx-phone'></i>
+				</div>
+			</div>
+
+      <div class="form-group">
+				<label for="gender">gender</label>
+				<div class="input-group">
+          <input type="radio" name="gender" value="male" checked><span>male</span>
+					<i class='bx bx-user'></i>
+          <input type="radio" name="gender" value="female" checked><span>female</span>
+					<i class='bx bx-user'></i>
+				</div>
+			</div>
+
+			
+
+      <div class="form-group">
+				
+				<div class="input-group">
+					<input type="text" name="age" id="email" placeholder="age">
+					<i class='bx bx-user'></i>
+				</div>
+			</div>
+
+			<div class="form-group">
+				
+				<div class="input-group">
+					<input type="text" name="bgroup" id="email" placeholder="First Blood Group">
+					<i class='bx bx-user'></i>
+				</div>
+			</div>
+
+
+			<div class="form-group">
+				
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" name="password" placeholder="Your password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">At least 8 characters</span>
+			</div>
+
+
+			<div class="form-group">
+				
+				<div class="input-group">
+					<input type="password" id="confirm-pass" name="confirmpassword" placeholder="Enter password again">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">Confirm password must be same with password</span>
+			</div>
+
+
+			<button type="submit" class="btn-submit" value="register">Register</button>
+			<p>I already have an account. <a href="#" onclick="switchForm('login', event)">Login</a></p>
+		</form>
+	</div>
+
+
+
+
+	<script>
+    
+function switchForm(className, e) {
+	e.preventDefault();
+	const allForm = document.querySelectorAll('form');
+	const form = document.querySelector(`form.${className}`);
+
+	allForm.forEach(item=> {
+		item.classList.remove('active');
+	})
+	form.classList.add('active');
+}
+
+  </script>
+</body>
+</html>

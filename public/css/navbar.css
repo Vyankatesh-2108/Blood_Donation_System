@@ -1,0 +1,151 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+p{
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #0d0e0d;
+}
+#title{
+    color: #444444;
+}
+.extra-div h2, .servicediv h2{
+    font-size: 0.9rem;
+    margin: 20px 0 15px 0;
+    font-weight: bold;
+    line-height: 1.1;
+    word-spacing: 4px;
+}
+
+i{
+    color: #474e4e;
+}
+i:hover{
+    color: #ec43d0;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(34, 33, 33, 0.3),rgba(59, 54, 54, 0.3));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%,100% 75%, 100% 100%, 0% 100%,0 0);
+    position: relative;
+}
+
+.header:before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    background-image:linear-gradient(rgba(34, 33, 33, 0.3),rgba(59, 54, 54, 0.3));
+    opacity: .9;
+    z-index: -1;
+    background-image: url('../css/backset.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background:white;
+    /*opacity: .2;*/
+}
+
+.nav-item a{
+    color: #444444!important;
+    display: flex;
+    display: grid;
+}
+
+.header-section{
+    width: 100%;
+    height: inherit;
+    color: rgb(223, 28, 28);
+    /*color: #444444;*/
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+}
+
+.center-div{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.header-buttons a{
+    border: 1px solid  #e01919;
+    border-radius: 100px;
+    margin: 0 1px;
+    padding: 12px 35px;
+    outline: none;
+    color:#e01919;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.header-buttons a:hover{
+    color: #faf6f6;
+    border: 1px solid #e01919;
+    background-color: #dc3737;
+    text-decoration: none;
+    box-shadow: 0 0 2px 0 #dc3737;
+}
+#welcome{
+    font-weight: bold;
+}
+.center-div p{
+    font-size: 1.3rem;
+    padding: 3px 2px 3px 10px;
+    font-weight: bold;
+    /*color: rgb(4, 213, 250);*/
+}
+
+
+/* ----- table -----*/
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 520px;
+    overflow: auto;
+ }
+ .table-wrapper-scroll-y {
+    display: block;
+}
+

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>blood</title>
+        <link rel="stylesheet" href="css/navbar.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    </head>
+    <body>  
+    <!-- Home Page With image -->  
+    <div class="header" id="topheader">
+        {{> navbar}}
+      <section class="header-section">
+          <div class="center-div">
+              <h1 class="font-wight-bold" id="welcome" style="margin-left:70px; font-size:70px; ">"GIVE THE GIFT OF</h1>
+              <h1 class="font-wight-bold" id="welcome" style="margin-left:96px; font-size:70px;"><span style="color:#444444;">LIFE</span> TO OTHERS"</h1>
+              <p style="#444444:red; margin-left:87px;">DONATION SYSTEM</p>
+              <div class="header-buttons" style="margin-left:80px;">
+                  <a href="/login">LOGIN</a>
+                  <a href="/showdonor">DONORS</a>
+              </div>
+          </div>
+      </section>
+    </div>
+
+    <!-- Information Flight -->
+
+            </div>
+      <!-- External Script Files -->
+      <!-- For jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      <!-- Counting Flights Details-->
+      <script>
+        $('.count').counterUp({
+          delay:10,
+          time:3000
+        })
+
+        
+  mybutton = document.getElementById("myBtn");
+
+  window.onscroll=function() {scrollFunction()};
+
+  function scrollFunction(){
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+      mybutton.style.display = "block";
+    }
+    else{
+      mybutton.style.display= "none";
+    }
+  }
+
+  function topFunction(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop=0;
+  }
+      </script> 
+    </body>
+</html>
